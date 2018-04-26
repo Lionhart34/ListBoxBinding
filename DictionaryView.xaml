@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:View="clr-namespace:ListBoxBinding.View"
+                    xmlns:ViewModel="clr-namespace:ListBoxBinding.ViewModel"
+                    >
+
+    <DataTemplate DataType="{x:Type ViewModel:ManageSkillsViewModel}">
+        <View:ManageSkillsView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type ViewModel:ProjectViewModel}">
+        <View:ProjectView/>
+    </DataTemplate>
+
+</ResourceDictionary>
