@@ -12,6 +12,8 @@
             <Button Margin="5 3" Padding="2" Command="{Binding GoTo}" CommandParameter="1">Manage Project</Button>
             <Button Margin="5 3" Padding="2" Command="{Binding GoTo}" CommandParameter="2">Manage Skills</Button>
             <Button Margin="5 3" Padding="2" Command="{Binding ContentOfDataSource}" >DataSource Content</Button>
+            <Button Margin="5 3" Padding="2" Command="{Binding NewWindow}" >NewWindow Content</Button>
+            <Label>Create new windows with ManageSkillViewModel</Label>
         </StackPanel>
 
         <ContentControl Grid.Column="1" Content="{Binding CurrentViewModel}" />

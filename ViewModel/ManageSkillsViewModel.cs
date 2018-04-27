@@ -11,14 +11,14 @@ namespace ListBoxBinding.ViewModel
     public class ManageSkillsViewModel : BaseViewModel
     {
 
-        private static ObservableCollection<Person> _persons = null;
-        public static ObservableCollection<Person> Persons
+        private ObservableCollection<Person> _persons = null;
+        public ObservableCollection<Person> Persons
         {
             get
             {
                 if (_persons == null)
                     _persons = new ObservableCollection<Person>(
-                        from Pers in Context.Persons
+                        from Pers in Global.Context.Persons
                         select Pers);
                 return _persons;
             }
@@ -28,14 +28,14 @@ namespace ListBoxBinding.ViewModel
             }
         }
 
-        private ObservableCollection<Skill> _skills;
+        private  ObservableCollection<Skill> _skills;
         public ObservableCollection<Skill> Skills
         {
             get
             {
                 if (_skills == null)
                     _skills = new ObservableCollection<Skill>(
-                        from skill in Context.Skills
+                        from skill in Global.Context.Skills
                         select skill);
                 return _skills;
 

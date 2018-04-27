@@ -56,6 +56,7 @@
     <Compile Include="Data\DataProvider.cs" />
     <Compile Include="Data\Person.cs" />
     <Compile Include="Data\Skill.cs" />
+    <Compile Include="Global.cs" />
     <Compile Include="MainViewModel.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\ManageSkillsViewModel.cs" />

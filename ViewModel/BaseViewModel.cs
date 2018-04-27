@@ -6,37 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Input;
 
 namespace ListBoxBinding.ViewModel
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        private static DataProvider _Context = null;
-        public static DataProvider Context
-        {
-            get
-            {
-                if (_Context == null)
-                {
-                    try
-                    {
-                        _Context = new DataProvider();
-                    }
-                    catch (Exception E)
-                    {
-                        MessageBox.Show(E.Message);
-                        throw;
-                    }
-                }
-                return _Context;
-            }
-            set
-            {
-                _Context = value;
-            }
-        }
-
         private BaseViewModel _CurrentViewModel = null;
         public BaseViewModel CurrentViewModel
         {
@@ -89,7 +66,6 @@ namespace ListBoxBinding.ViewModel
 
         }
 
-
         private ICommand _GoToProj = null;
         public ICommand GoToProj
         {
@@ -100,7 +76,6 @@ namespace ListBoxBinding.ViewModel
                 return _GoToProj;
             }
         }
-
 
         private ICommand _GoToSkills = null;
         public ICommand GoToSkills
@@ -121,7 +96,7 @@ namespace ListBoxBinding.ViewModel
                 if (_ContentOfDataSource == null)
                     _ContentOfDataSource = new ProxyCommand(() => 
                     {
-                        foreach(Person P in Context.Persons)
+                        foreach(Person P in Global.Context.Persons)
                         {
                             if (P.MasterSkill == null)
                                 MessageBox.Show("The MasterSkill of " + P.Name + " is null !");
