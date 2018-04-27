@@ -16,7 +16,7 @@
                             Background="Transparent"
                             Margin="0 1"
                             ItemsSource="{Binding DataContext.Skills,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}},Mode=OneWay}"
-                            SelectedItem="{Binding MasterSkill, Mode=TwoWay,UpdateSourceTrigger=LostFocus}"
+                            SelectedItem="{Binding MasterSkill, Mode=TwoWay}"
                             SelectionMode="Single"
                             ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                             >
