@@ -20,8 +20,6 @@ namespace ListBoxBinding.ViewModel
                     _persons = new ObservableCollection<Person>(
                         from Pers in Context.Persons
                         select Pers);
-                
-
                 return _persons;
             }
             set

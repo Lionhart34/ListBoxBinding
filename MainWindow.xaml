@@ -11,6 +11,7 @@
             Grid.Column="0">
             <Button Margin="5 3" Padding="2" Command="{Binding GoTo}" CommandParameter="1">Manage Project</Button>
             <Button Margin="5 3" Padding="2" Command="{Binding GoTo}" CommandParameter="2">Manage Skills</Button>
+            <Button Margin="5 3" Padding="2" Command="{Binding ContentOfDataSource}" >DataSource Content</Button>
         </StackPanel>
 
         <ContentControl Grid.Column="1" Content="{Binding CurrentViewModel}" />

@@ -113,6 +113,26 @@ namespace ListBoxBinding.ViewModel
             }
         }
 
+        private ICommand _ContentOfDataSource = null;
+        public ICommand ContentOfDataSource 
+        {
+            get
+            {
+                if (_ContentOfDataSource == null)
+                    _ContentOfDataSource = new ProxyCommand(() => 
+                    {
+                        foreach(Person P in Context.Persons)
+                        {
+                            if (P.MasterSkill == null)
+                                MessageBox.Show("The MasterSkill of " + P.Name + " is null !");
+                            else
+                                MessageBox.Show(P.Name + " MasterSkills=> " + P.MasterSkill.ShortName + " : " + P.MasterSkill.LongName);
+                        }
+                    });
+                return _ContentOfDataSource;
+            }
+        }
+
 
         #endregion
 
