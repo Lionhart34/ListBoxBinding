@@ -16,10 +16,12 @@
                             Background="Transparent"
                             Margin="0 1"
                             ItemsSource="{Binding DataContext.Skills,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}},Mode=OneWay}"
-                            SelectedItem="{Binding MasterSkill, Mode=TwoWay}"
+                            SelectedItem="{Binding MasterSkill, Mode=TwoWay,UpdateSourceTrigger=LostFocus}"
                             SelectionMode="Single"
                             ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                             >
+                            <!--The SelectedItem seems to work only if binding Delay is > 0 
+                            Or if UpdateSourceTrigger = LostFocus-->
                             <ListBox.ItemContainerStyle>
                                 <Style TargetType="ListBoxItem">
                                     <Setter Property="Padding" Value="0"/>

@@ -9,8 +9,8 @@
         </Grid.ColumnDefinitions>
         <StackPanel
             Grid.Column="0">
-            <Button Margin="5 3" Padding="2" Command="{Binding GoTo}" CommandParameter="1">Gestion de Projet</Button>
-            <Button Margin="5 3" Padding="2" Command="{Binding GoTo}" CommandParameter="2">Gestion de Comp</Button>
+            <Button Margin="5 3" Padding="2" Command="{Binding GoTo}" CommandParameter="1">Manage Project</Button>
+            <Button Margin="5 3" Padding="2" Command="{Binding GoTo}" CommandParameter="2">Manage Skills</Button>
         </StackPanel>
 
         <ContentControl Grid.Column="1" Content="{Binding CurrentViewModel}" />
